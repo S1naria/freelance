@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block prodcut_card %}
+    <div class="product-card">
+        <div class="product-image">
+            <img src="{{ laptop.image.url }}" alt="{{ laptop.mark }}">
+        </div>
+        <div class="product-details">
+            <h2 style="margin-bottom: 50px; margin-top: -70px; font-size: 40px;">{{ laptop.mark }}</h2>
+            <p style="margin-bottom: 8px;"><span style="font-weight: bold;">SSD :</span> {{ laptop.SSD }}</p>
+            <p><span style="font-weight: bold;">RAM :</span> {{ laptop.RAM }}</p>
+            <p style="margin-bottom: 8px;"><div style="font-weight: bold; margin-bottom: 8px;">Полное описание :</div> {{ laptop.long_describe }}</p>
+        </div>
+        <p class="price">Цена: {{ laptop.price }}</p>
+    </div>
+{% endblock %}
